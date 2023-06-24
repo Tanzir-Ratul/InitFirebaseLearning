@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.initfirebaselearning.LoginFragment"
+        android:label="fragment_Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_itemSaveFragment"
+            app:destination="@id/itemSaveFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.initfirebaselearning.RegistrationFragment"
+        android:label="Registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_itemSaveFragment"
+            app:destination="@id/itemSaveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSaveFragment"
+        android:name="com.example.initfirebaselearning.ItemSaveFragment"
+        android:label="fragment_item_save"
+        tools:layout="@layout/fragment_item_save" />
+
+</navigation>
